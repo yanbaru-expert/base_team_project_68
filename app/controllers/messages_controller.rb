@@ -15,6 +15,11 @@ class MessagesController < ApplicationController
     Message.create(message_params)
   end
 
+  # showアクション
+  def show
+    @message = Message.find(params[:id])
+  end
+
   private
 
   def message_params
