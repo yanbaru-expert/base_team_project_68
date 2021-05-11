@@ -1,5 +1,10 @@
 class MessagesController < ApplicationController
 
+  # indexアクション
+  def index
+    @messages = Message.all
+  end
+
   # newアクション
   def new
     @message = Message.new
